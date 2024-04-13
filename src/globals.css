@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 16px;
+}
+@layer base {
+  :root {
+    --surface-primary: #ffffff;
+    --surface-secondary: #0214310a;
+    --surface-tertiary: #010a1814;
+    --surface-accent-secondary: #2075f514;
+
+    --icon-warning: #e7891a;
+    --text-primary: #021431;
+    --text-secondary: #021431a3;
+    --text-tertiary: #0214317a;
+    --text-accent: #2075f5;
+
+    --text-icons-secondaty-text: #b3b3b3;
+    --surface-error-secondary: #ff00000d;
+    --surface-warning-secondary: rgba(255, 122, 0, 0.05);
+    --surface-accent-hover: #2075f5a3;
+    --corners-round: 22.5rem;
+    --corners-lg: 1.25rem;
+    --surface-accent: #2075f5;
+    --text-primary-on-color: #ffffff;
+    --text-disabled: #010a1852;
+    --text-error: #e31717;
+    --text-warning: #e7891a;
+    --surface-primary-invese: #010a18;
+    --text-success: #25d155;
+    --border-primary: rgba(2, 20, 49, 0.16);
+    --border-secondary: rgba(2, 20, 49, 0.08);
+  }
+  :root[data-theme="dark"] {
+    --surface-primary: #111111;
+    --surface-secondary: rgba(255, 255, 255, 0.04);
+    --surface-tertiary: rgba(255, 255, 255, 0.08);
+    --surface-error-secondary: rgba(255, 0, 0, 0.05);
+    --text-disabled: rgba(255, 255, 255, 0.32);
+    --border-secondary: rgba(255, 255, 255, 0.08);
+    --text-primary: #fff;
+    --text-secondary: rgba(255, 255, 255, 0.56);
+    --text-tertiary: rgba(255, 255, 255, 0.4);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html[data-theme="dark"] .theme-invert {
+  filter: invert(100%);
+}

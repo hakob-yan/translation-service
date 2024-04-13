@@ -1,0 +1,392 @@
+export const HEADER = {
+  BUY: "header_buy",
+  SELL: "header_sell",
+  RECEIVE: "header_receive",
+};
+export const BUY_CRYPTO_MAIN_PAGE = {
+  CREDIT_CARD: "buy_crypto_main_page_credit_card",
+  BANK_TRANSFER: "buy_crypto_main_page_bank_transfer",
+  ASTRO_PAY: "buy_crypto_main_page_ASTRO_PAY",
+  YOU_PAY: "buy_crypto_main_page_you_pay",
+  PAY_TOOLTIP: "buy_crypto_main_page_pay_tooltip",
+  YOU_GET: "buy_crypto_main_page_you_get",
+  GET_TOOLTIP: "buy_crypto_main_page_get_tooltip",
+  COUNTRY_RESIDENCE: "buy_crypto_main_page_country_residence",
+  COUNTRY_PLACEHOLDER: "buy_crypto_main_page_country_placeholder",
+  BUY_BUTTON: "buy_crypto_main_page_buy_button",
+};
+export const BUY_CRYPTO_SUMMARY = {
+  HEADER: "buy_crypto_summary_header",
+  PAY: "buy_crypto_summary_pay",
+  GET: "buy_crypto_summary_get",
+  EXCHANGE_RATE: "buy_crypto_summary_exchange_rate",
+  SERVICE_FEE: "buy_crypto_summary_service_fee",
+  NETWORK_FEE: "buy_crypto_summary_network_fee",
+  NETWORK: "buy_crypto_summary_network",
+  INFO_TEXT: "buy_crypto_summary_info_text",
+  WALLET_ADDRESS: "buy_crypto_summary_wallet_address",
+  WALLET_TOOLTIP: "buy_crypto_summary_wallet_tooltip",
+  TIMER_TEXT: "buy_crypto_summary_timer_text",
+  WALLET_PLACEHOLDER: "buy_crypto_summary_wallet_placeholder",
+  START_OVER: "buy_crypto_summary_start_over",
+  CONFIRM: "buy_crypto_summary_confirm",
+  CONFIRM_TRANSACTION: "buy_crypto_summary_CONFIRM_TRANSACTION",
+  NEXT: "buy_crypto_summary_aNEXT",
+  QR_HEADER: "buy_crypto_summary_qr_header",
+};
+export const BUY_CRYPTO_TRANSACTION_RESULT = {
+  HEADER: "buy_crypto_transaction_result_header",
+  EXCHANGE_RATE: "buy_crypto_transaction_result_exchange_rate",
+  FIAT_EQUIVALENT: "buy_crypto_transaction_result_fiat_equivalent",
+  SERVICE_FEE: "buy_crypto_transaction_result_service_fee",
+  NETWORK_FEE: "buy_crypto_transaction_result_network_fee",
+  INFO_TEXT: "buy_crypto_transaction_result_info_text",
+  BUTTON_TEXT: "buy_crypto_transaction_result_button_text",
+};
+export const RECEIVE_MAIN_PAGE = {
+  FIAT_AMOUNT: "receive_main_page_fiat_amount",
+  CRYPTO: "receive_main_page_crypto",
+  WALLET_ADDRESS: "receive_main_page_wallet_address",
+  WALLET_TOOLTIP: "receive_main_page_wallet_tooltip",
+  WALLET_PLACEHOLDER: "receive_main_page_wallet_placeholder",
+  BUTTON_TEXT: "receive_main_page_button_text",
+  PASTE_WALLET: "receive_main_page_paste_wallet",
+  PASTE_IBAN: "receive_main_page_paste_iban",
+  RECEIVE: "receive_main_page_receive",
+};
+export const RECEIVE_GENERATE_LINK = {
+  HEADER: "receive_generate_link_header",
+  RECIPIENT: "receive_generate_link_recipient",
+  RECIPIENT_PLACEHOLDER: "receive_generate_link_recipient_placeholder",
+  PAYER: "receive_generate_link_payer",
+  PAYER_PLACEHOLDER: "receive_generate_link_payer_placeholder",
+  COMMENTS: "receive_generate_link_comments",
+  COMMENTS_PLACEHOLDER: "receive_generate_link_comments_placeholder",
+  COMMENT_TOOLTIP: "receive_generate_link_comment_tooltip",
+  BUTTON_TEXT: "receive_generate_link_button_text",
+};
+export const RECEIVE_LINK = {
+  PAYMENT_LINK: "receive_link_payment_link",
+  COPY: "receive_link_copy",
+  SHARE_LINK: "receive_link_share_link",
+  BUTTON_TEXT: "receive_link_button_text",
+  PAYER: "receive_link_payer",
+  RECEPIENT: "receive_link_recepient",
+  GO_HOME: "receive_link_go_home",
+  EXPIRED_TEXT: "receive_link_expited_text",
+  LINK_EXPIRED: "receive_link_elink_expited",
+};
+export const RECEIVE_SUMMARY = {
+  HEADER: "receive_summary_header",
+  BANNER_HEADER: "receive_summary_banner_header",
+  BANNER_TEXT: "receive_summary_banner_text",
+  BANNER_WARNING: "receive_summary_banner_warning",
+  RECIPIENT: "receive_summary_recipient",
+  PAYER: "receive_summary_payer",
+  COMMENTS: "receive_summary_comments",
+  RECEIVE_DETAILS: "receive_summary_receive_details",
+  EXCHANGE_RATE: "receive_summary_exchange_rate",
+  CRYPTO_TYPE: "receive_summary_crypto_type",
+  NETWORK: "receive_summary_network",
+  NETWORK_FEE: "receive_summary_network_fee",
+  SERVICE_FEE: "receive_summary_service_fee",
+  WALLET_ADDRESS: "receive_summary_wallet_address",
+  PAYMENT_METHOD: "receive_summary_payment_method",
+  CREDIT_CARD: "receive_summary_credit_card",
+  BANK_TRANSFER: "receive_summary_bank_transfer",
+  BUTTON_TEXT: "receive_summary_button_text",
+  BANNER_TEXT_CONTACT_US: "receive_summary_button_text_contact_us",
+  CONFIRM: "Confirm",
+};
+export const RECEIVE_EXPIRED = {
+  HEADER: "receive_expired_header",
+  TEXT: "receive_expired_text",
+  BUTTON_TEXT: "receive_expired_button_text",
+};
+export const SELL_FLOW_MAIN_PAGE = {
+  BANK_TRANSFER: "sell_flow_main_page_bank_transfer",
+  INSTANT_BANKING: "sell_flow_main_page_instant_banking",
+  TEXT: "sell_flow_main_page_text",
+  YOU_PAY: "sell_flow_main_page_you_pay",
+  PAY_TOOLTIP: "sell_flow_main_page_pay_tooltip",
+  YOU_GET: "sell_flow_main_page_you_get",
+  GET_TOOLTIP: "sell_flow_main_page_get_tooltip",
+  COUNTRY_OF_RESIDENCE: "sell_flow_main_page_country_of_residence",
+  COUNTRY_PLACEHOLDER: "sell_flow_main_page_country_placeholder",
+  BUTTON_TEXT: "sell_flow_main_page_button_text",
+};
+export const SELL_FLOW_SUMMARY = {
+  HEADER: "sell_flow_summary_header",
+  PAY: "sell_flow_summary_pay",
+  GET: "sell_flow_summary_get",
+  EXCHANGE_RATE: "sell_flow_summary_exchange_rate",
+  NETWORK: "sell_flow_summary_network",
+  SERVICE_FEE: "sell_flow_summary_service_fee",
+  START_OVER: "sell_flow_summary_start_over",
+  CONFIRM: "sell_flow_summary_confirm",
+  SORT_CODE: "sell_flow_sort_code",
+  ACCOUNT_NUMBER: "sell_flow_account_number",
+};
+export const SELL_FLOW_BANK_TRANSFER = {
+  HEADER: "sell_flow_bank_transfer_header",
+  ROW_1: "sell_flow_bank_transfer_row_1",
+  ROW_2: "sell_flow_bank_transfer_row_2",
+  ROW_3: "sell_flow_bank_transfer_row_3",
+  BENIFICIARY: "sell_flow_bank_transfer_benificiary",
+  BENIFICIARY_PLACEHOLDER: "sell_flow_bank_transfer_benificiary_placeholder",
+  IBAN: "sell_flow_bank_transfer_iban",
+  ACCOUNT_NUMBER: "sell_flow_bank_transfer_account_number",
+  SORT_CODE: "sell_flow_bank_transfer_sort_code",
+  IBAN_PLACEHOLDER: "sell_flow_bank_transfer_iban_placeholder",
+  BUTTON_TEXT: "sell_flow_bank_transfer_button_text",
+  BANK_NAME: "sell_flow_bank_name",
+  BANK_DETAILS: "sell_flow_bank_detail",
+  BANK_ADDRESS: "sell_flow_bank_address",
+};
+export const SUMMARY_SELL = {
+  HEADER: "summary_sell_header",
+  PAY: "summary_sell_pay",
+  GET: "summary_sell_get",
+  ROW_1: "summary_sell_row_1",
+  ROW_2_PLEASE_SEND: "summary_sell_row_2_please_send",
+  ROW_2_TO_THE_NEXT: "summary_sell_row_2_to_the_next",
+  QR_TEXT: "summary_sell_qr_text",
+  FOOTER_TEXT: "summary_sell_footer_text",
+  BUTTON_TEXT: "summary_sell_button_text",
+};
+export const MENU_MAIN = {
+  GENERAL: "menu_main_general",
+  COMMUNITY: "menu_main_community",
+  CURRENCY: "menu_main_currency",
+  SUPPORT: "menu_main_support",
+  FEEDBACK: "menu_main_feedback",
+  DARK_MODE: "menu_main_dark_mode",
+  ABOUT_US: "menu_main_about_us",
+  PROFILE: "menu_main_profile",
+  LEGAL: "menu_main_legal",
+  HEADER: "menu_main_header",
+  LOGIN: "menu_main_login",
+  LOGOUT: "menu_main_logout",
+  BUY_CRYPTO: "menu_main_buy_crypto",
+  SELL_CRYPTO: "menu_main_sell_crypto",
+  RECEIVE_CRYPTO: "menu_main_receive_crypto",
+  TRANSACTION_HISTORY: "menu_main_transaction_history",
+  BADGE_STATUS: "menu_main_badge_status",
+  BUY_TEXT: "menu_main_buy_text",
+  WELCOME: "menu_main_welcome_to_swaps",
+  ACCESS_FEATURES: "menu_main_access_features",
+};
+export const MENU_LEGAL = {
+  HEADER: "menu_legal_header",
+  PRIVACY_POLICY: "menu_legal_privacy_policy",
+  TERMS: "menu_legal_terms",
+  COOKIE_POLICY: "menu_legal_cookie_policy",
+  ABOUT_US: "menu_legal_about_us",
+  HELP_CENTER: "menu_legal_help_center",
+};
+export const CRYPTO_DROPDOWN = {
+  HEADER: "crypto_dropdown_header",
+  SEARCH: "crypto_dropdown_search",
+};
+export const CURRENCY_DROPDOWN = {
+  HEADER: "currency_dropdown_header",
+};
+export const COUNTRY_DROPDOWN = {
+  HEADER: "country_dropdown_header",
+};
+export const PAYMENT_METHOD_DROPDOWN = {
+  HEADER: "payment_method_dropdown_header",
+};
+export const LOADER = {
+  LOADER_TEXT: "loader_loader_text",
+};
+export const TRANSACTION_HISTORY_MAIN_PAGE = {
+  HEADER: "transaction_history_main_page_header",
+  SEARCH: "transaction_history_main_page_search",
+  ALL: "transaction_history_main_page_all",
+  SUCCESS: "transaction_history_main_page_success",
+  FAILED: "transaction_history_main_page_failed",
+  PENDING: "transaction_history_main_page_pending",
+  BUY: "transaction_history_main_page_buy",
+  SELL: "transaction_history_main_page_sell",
+  RECEIVE: "transaction_history_main_page_receive",
+  LOAD_MORE: "transaction_history_main_page_load_more",
+};
+export const TRANSACTION_DETAILS = {
+  HEADER: "transaction_details_header",
+  STATUS: "transaction_details_status",
+  TRANSACTION_TYPE: "transaction_details_transaction_type",
+  TRANSACTION_ID: "transaction_details_transaction_id",
+  CREATED_AT: "transaction_details_created_at",
+  EXCHANGE_RATE: "transaction_details_exchange_rate",
+  PAIR_OF_ASSETS: "transaction_details_pair_of_assets",
+  SERVICE_FEE: "transaction_details_service_fee",
+  NETWORK_FEE: "transaction_details_network_fee",
+  NETWORK: "transaction_details_network",
+  WALLET_ADDRESS: "transaction_details_wallet_address",
+  CONTACT_SUPPORT: "transaction_details_contact_support",
+  TEXT: "transaction_details_text",
+  BACK_HOME: "transaction_details_back_home",
+  VIEW_TRANSACTION: "transaction_details_view_transaction",
+};
+export const TRANSACTION_HISTORY_EMPTY = {
+  HEADER: "transaction_history_empty_header",
+  TEXT: "transaction_history_empty_text",
+  BUTTON_TEXT: "transaction_history_empty_button_text",
+  NO_TRANSACTION: "transaction_history_empty_no_transaction",
+};
+export const WELCOME_PAGE_LOGIN = {
+  SIGN_IN: "welcome_page_sign_in",
+  SIGN_UP: "welcome_page_sign_up",
+  PEP_FIRST_TEXT: "welcome_page_PEP_FIRST_TEXT",
+  PEP_FIRST_HREF: "welcome_page_PEP_FIRST_HREF",
+  PEP_SECOND_TEXT: "welcome_page_PEP_SECOND_TEXT",
+  OWN_CRYPTOWALLET: "welcome_page_OWN_CRYPTOWALLET",
+  SANCTIONS_LIST_TEXT: "welcome_page_sanctions_list_TEXT",
+  SANCTIONS_LIST_HREF: "welcome_page_sanctions_list_HREF",
+  HEADER: "welcome_page_login_header",
+  TEXT: "welcome_page_login_text",
+  OR: "welcome_page_login_or",
+  CONTINUE: "welcome_page_login_continue",
+  EMAIL: "welcome_page_login_email",
+  EMAIL_PLACEHOLDER: "welcome_page_login_email_placeholder",
+  BUTTON_TEXT: "welcome_page_login_button_text",
+  PRIVACY_TEXT: "welcome_page_login_privacy_text",
+  PRIVACY_TEXT_TERMS: "welcome_page_login_privacy_text_terms",
+  PRIVACY_TEXT_POLICY: "welcome_page_login_privacy_text_policy",
+  PRIVACY_TEXT_AND: "welcome_page_login_privacy_text_and",
+  SUBSCRIPTION_TEXT: "welcome_page_login_subscription_text",
+  TERMS_AGREEMENT: "welcome_page_login_terms_agreement",
+  AGREEMENT_HEADER: "welcome_page_login_agreement_header",
+  AGREEMENT_DESCRIPTION: "welcome_page_login_agreement_description",
+  SELECT_ALL: "welcome_page_login_agreement_select_all",
+  BOTTOM_TEXT: "welcome_page_login_agreement_BOTTOM_TEXT",
+};
+export const CODE_VERIFICATION = {
+  HEADER: "code_verification_header",
+  TEXT: "code_verification_text",
+  CODE: "code_verification_code",
+  PASTE_CODE: "code_verification_paste_code",
+  TIMER_TEXT_PART1: "code_verification_timer_text_part1",
+  TIMER_TEXT_PART2: "code_verification_timer_text_part2",
+  TIMER_TEXT_MINUTES: "code_verification_timer_text_minutes",
+  TIMER_TEXT_SECONDS: "code_verification_timer_text_seconds",
+  TIMER_TEXT_MINUTE: "code_verification_timer_text_minute",
+  TIMER_TEXT_SECOND: "code_verification_timer_text_second",
+  RESEND_CODE: "code_verification_resend_code",
+  PRE_RESEND_CODE: "code_verification_PRE_RESEND_CODE",
+  FRAUD_PROTECT_HEADER: "code_verification_FRAUD_PROTECT_HEADER",
+  FRAUD_PROTECT_ROW_1: "code_verification_FRAUD_PROTECT_ROW_1",
+  FRAUD_PROTECT_ROW_2: "code_verification_FRAUD_PROTECT_ROW_2",
+  FRAUD_PROTECT_FOOTER: "code_verification_FRAUD_PROTECT_FOOTER",
+};
+export const PERSONAL_DETAILS = {
+  HEADER: "personal_details_header",
+  STEP: "personal_details_step",
+  TEXT: "personal_details_text",
+  FIRST_NAME: "personal_details_first_name",
+  LAST_NAME: "personal_details_last_name",
+  MIDDLE_NAME: "personal_details_middle_name",
+  DATE_OF_BIRTH: "personal_details_date_of_birth",
+  DATE_OF_BIRTH_TOOLTIP: "personal_details_date_of_birth_tooltip",
+  BUTTON_TEXT: "personal_details_button_text",
+};
+export const RESIDENCE_ADDRESS = {
+  HEADER: "residence_adress_header",
+  LABEL: "residence_adress_label",
+  COUNTRY: "residence_adress_country",
+  ADDRESS: "residence_adress_address",
+  CITY: "residence_adress_city",
+  STATE: "residence_adress_state",
+  ZIP: "residence_adress_zip",
+  TEXT: "residence_adress_text",
+};
+export const KYC_PAGE = {
+  HEADER: "kyc_page_header",
+  TEXT: "kyc_pafe_text",
+  ROW_1: "kyc_pafe_row_1",
+  ROW_2: "kyc_pafe_row_2",
+  BUTTON_TEXT: "kyc_pafe_button_text",
+  SUCCESSFUL: "kyc_pafe_SUCCESSFUL",
+  SUCCESSFUL_DESCRIPTION: "kyc_pafe_SUCCESSFUL_DESCRIPTION",
+};
+export const KYC_SUCCESS = {
+  HEADER: "kyc_success_header",
+  TEXT: "kyc_success_text",
+  BUTTON_TEXT: "kyc_success_button_text",
+};
+export const ERROR_MESSAGES = {
+  ABC: "error_messages_abc",
+  EMAIL: "error_messages_email",
+  UNSUPPORTED_COUNTRY: "error_messages_unsuppoerted_coutry",
+  DELETED_ACCOUNT: "error_messages_deleted_account",
+  INVALID_DATE_BIRTH: "error_messages_invalid_date_birth",
+  DATE_BIRTH_REQUIRED: "error_messages_date_birth_required",
+  LASTNAME_REQUIRED: "error_messages_lastname_required",
+  FIRSTNAME_REQUIRED: "error_messages_firstname_required",
+  WE_SENT_CODE_AGAIN: "error_messages_we_sent_code_again",
+  ATTEMPTS_LEFT: "error_messages_left_attempts",
+  YOU_TRIED_ALL_ATTEMPTS: "error_messages_you_tried_all_attempts",
+  PURCHASE_LIMITS: "error_messages_purchase_limits",
+  MORE_THAN: "error_messages_more_than",
+  LESS_THAN: "error_messages_less_than",
+  UNSUPPORTED_BILLING_COUNTRY: "error_messages_unsupported_billing_country",
+  INVALID_ADDRESS: "error_messages_invalid_address",
+  MIN_CHARACTERS: "error_messages_MIN_CHARACTERS",
+};
+
+export const ACTIONS = {
+  RESTRICTED_COUNTRIES: "actions_restricted_countries",
+  COPIED: "actions_copied",
+  COPY_LINK: "actions_copied_link",
+  SELECT_CURRENCY: "actions_select_currency",
+  SELECT_CRYPTO_CURRENCY: "actions_select_crypto_currency",
+  HELP: "actions_help",
+  UNDERSTAND: "actions_understand",
+  OK: "actions_ok",
+  COPY_ALL: "actions_copy_all",
+};
+export const ADDRESS = {
+  LINE: "addres_line",
+};
+export const PAYMENT = {
+  GET_INFO: "payment_get_info",
+};
+export const THEME_MODE = {
+  LIGHT: "THEME_MODE_LIGHT",
+  DARK: "THEME_MODE_DARK",
+  SYSTEM: "THEME_MODE_SYSTEM",
+  TITLE: "THEME_MODE_TITLE",
+};
+export const PROMPTS = {
+  NAME_MUST_MATCH: "prompts_name_must_match",
+  BE_SURE_TO_INCLUDE: "prompts_be_sure_to_include",
+  TRANSFERS_ARE_NOT_INSTANT: "prompts_transfers_are_noy_instant",
+  MAKE_TRANSFER_BY: "prompts_make_trsnafer_by",
+  PLEASE_INITIATE_ONLY: "prompts_please_initiate_only_one",
+  WE_WILL_SEND: "prompts_we_wiill_send",
+  YOUR_BANK_ACCOUNT: "prompts_we_your_bank_account",
+};
+export const META = {
+  BUY_TITLE: "meta_buy_title",
+  SELL_TITLE: "meta_sell_title",
+  RECEIVE_TITLE: "meta_receive_title",
+  BUY_DESCRIPTION: "meta_buy_description",
+  SELL_DESCRIPTION: "meta_sell_description",
+  RECEIVE_DESCRIPTION: "meta_receive_description",
+};
+export const FOOTER = {
+  USE_TERMS: "footer_use_terms",
+  PRIVACY_POLICY: "footer_privacy_policy",
+  COOKIE_POLICY: "footer_cookie_policy",
+  CONTACT_US: "footer_contact_us",
+};
+export const BILLING_ADDRESS = {
+  HEADER: "billing_adress_header",
+  LABEL: "billing_adress_label",
+  COUNTRY: "billing_adress_country",
+  ADDRESS: "billing_adress_address",
+  CITY: "billing_adress_city",
+  STATE: "billing_adress_state",
+  ZIP: "billing_adress_zip",
+};
