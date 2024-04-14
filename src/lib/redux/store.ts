@@ -2,11 +2,14 @@
 
 import { configureStore } from "@reduxjs/toolkit";
 import { localeSlice } from "./features/locale/localeSlice";
+import { configsSlice } from "./features/configs/configsSlice";
+
 import { isProduction } from "@/utils/isProduction";
 
 export const store = configureStore({
   reducer: {
     [localeSlice.name]: localeSlice.reducer,
+    [configsSlice.name]: configsSlice.reducer,
   },
   devTools: isProduction() ? false : true,
 });
