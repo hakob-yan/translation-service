@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { THEMES } from "@/constants";
+import { CONFIGS, THEMES } from "@/constants";
 
 const initialState = {
   theme: THEMES.LIGHT,
 };
 
 export const configsSlice = createSlice({
-  name: "configs",
+  name: CONFIGS,
   initialState,
   reducers: {
     setReduxTheme: (state, action) => {

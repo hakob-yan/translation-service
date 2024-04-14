@@ -17,6 +17,7 @@ import itKeys from "@/constants/translation/it";
 import ruKeys from "@/constants/translation/ru";
 import ptKeys from "@/constants/translation/pt";
 import etKeys from "@/constants/translation/et";
+import { LOCALES } from "@/constants";
 
 export const locales = {
   en: { value: "English", icon: English, keys: enKeys },
@@ -33,7 +34,7 @@ export type ILocaleKey = keyof typeof locales;
 const initialState = locales;
 
 export const localeSlice = createSlice({
-  name: "locales",
+  name: LOCALES,
   initialState,
   reducers: {
     setLocale: (state, action) => {
