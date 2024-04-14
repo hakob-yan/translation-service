@@ -37,14 +37,22 @@ export const localeSlice = createSlice({
   name: LOCALES,
   initialState,
   reducers: {
-    setLocale: (state, action) => {
+    setLocaleKey: (state, action) => {
+      const locale = action.payload.locale as ILocaleKey;
+      const key = action.payload.key;
+      const value = action.payload.value;
+
       return {
         ...state,
+        [locale]: {
+          ...state[locale],
+          keys: { ...state[locale].keys, [key]: value },
+        },
       };
     },
   },
 });
 
-export const { setLocale } = localeSlice.actions;
+export const { setLocaleKey } = localeSlice.actions;
 
 export default localeSlice.reducer;

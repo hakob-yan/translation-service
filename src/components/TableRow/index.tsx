@@ -8,41 +8,31 @@ type Props = {
 };
 
 function TableRow({ order, enKey, value, onChange }: Props) {
-  const [isEdit, setIsEdit] = useState(false);
-  const handleDoubleClick = (e: any) => {
-    e.preventDefault();
-    setIsEdit(true);
-  };
-  const handleChange = (e: any) => {
-    onChange(e.target.value);
-  };
+  const [isEditMode, setIsEditMode] = useState(false);
+
   return (
-    <tr
-      className="p-4 hover:bg-surface-secondary relative h-full"
-      onMouseEnter={() => {}}
-      onMouseLeave={() => {}}
-      onBlur={() => setIsEdit(false)}
-    >
-      <td className="border-2 p-4 border-surface-tertiary">{order}</td>
-      <td className="border-2 p-4 border-surface-tertiary">{enKey}:</td>
-      {!isEdit ? (
-        <td
-          className="border-2  border-surface-tertiary min-h-[20rem] h-full"
-          onDoubleClick={handleDoubleClick}
-        >
-          <div className="p-4">{value}</div>
-        </td>
-      ) : (
-        <td>
+    <>
+      <div className="border p-4 border-surface-tertiary">{order}</div>
+      <div className="border p-4 border-surface-tertiary">{enKey}</div>
+      <div
+        className={`border ${
+          !isEditMode ? "p-4" : ""
+        }  border-surface-tertiary`}
+        onDoubleClick={() => setIsEditMode(true)}
+      >
+        {isEditMode ? (
           <textarea
-            className="h-full w-full p-4 bg-transparent focus:border-none focus:outline-none"
-            onBlur={() => setIsEdit(false)}
-            onChange={handleChange}
+            autoFocus={true}
             value={value}
+            onBlur={() => setIsEditMode(false)}
+            className="h-full w-full bg-transparent p-4"
+            onChange={(e) => onChange(e.target.value)}
           />
-        </td>
-      )}
-    </tr>
+        ) : (
+          <span>{value}</span>
+        )}
+      </div>
+    </>
   );
 }
 
