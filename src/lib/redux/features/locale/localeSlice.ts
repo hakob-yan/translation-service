@@ -1,3 +1,4 @@
+import { createSlice } from "@reduxjs/toolkit";
 import English from "@/assets/icons/countries/GREAT-BRITIAN.svg";
 import German from "@/assets/icons/countries/GERMANY.svg";
 import Spain from "@/assets/icons/countries/SPAIN.svg";
@@ -27,5 +28,22 @@ export const locales = {
   pt: { value: "Portugueses", icon: Portugueses, keys: ptKeys },
   et: { value: "Estonian", icon: Estonian, keys: etKeys },
 };
-
 export type ILocaleKey = keyof typeof locales;
+
+const initialState = locales;
+
+export const localeSlice = createSlice({
+  name: "locales",
+  initialState,
+  reducers: {
+    setLocale: (state, action) => {
+      return {
+        ...state,
+      };
+    },
+  },
+});
+
+export const { setLocale } = localeSlice.actions;
+
+export default localeSlice.reducer;

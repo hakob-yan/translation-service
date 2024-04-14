@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { cookies } from "next/headers";
 import { PREFERED_THEME, THEMES } from "@/constants";
+import { ReduxProvider } from "@/components/Providers/ReduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,15 +23,17 @@ export default function RootLayout({
 
   return (
     <html lang="en" data-theme={dataTheme}>
-      <body
-        className={`${inter.className} bg-surface-primary text-text-primary `}
-      >
-        <header>
-          <Navbar />
-        </header>
-        <main className="max-w-[100rem] mx-auto">{children}</main>
-        <Footer />
-      </body>
+      <ReduxProvider>
+        <body
+          className={`${inter.className} bg-surface-primary text-text-primary `}
+        >
+          <header>
+            <Navbar />
+          </header>
+          <main className="max-w-[100rem] mx-auto">{children}</main>
+          <Footer />
+        </body>
+      </ReduxProvider>
     </html>
   );
 }

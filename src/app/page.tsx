@@ -1,7 +1,10 @@
-import { locales } from "@/constants/locales";
+"use client";
+import { localesSelect } from "@/lib/redux/features/locale/selectors";
 import Image from "next/image";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 export default function Home() {
+  const locales = useSelector(localesSelect);
   const localesArr = Object.entries(locales);
 
   return (

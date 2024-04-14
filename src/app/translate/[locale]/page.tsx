@@ -1,8 +1,15 @@
 "use client";
-import { ILocaleKey, locales } from "@/constants/locales";
+
 import Image from "next/image";
 import backArrow from "@/assets/icons/others/back-arrow.svg";
+import pencil from "@/assets/icons/others/pencil.svg";
+
 import Link from "next/link";
+import { useMemo, useState } from "react";
+import TableRow from "@/components/TableRow";
+import { ILocaleKey, locales } from "@/lib/redux/features/locale/localeSlice";
+import { useSelector } from "react-redux";
+import { localeSelect } from "@/lib/redux/features/locale/selectors";
 const enKeys = locales["en"].keys;
 
 interface ILocalePage {
@@ -11,8 +18,10 @@ interface ILocalePage {
   };
 }
 export default function LocaleKeys({ params: { locale } }: ILocalePage) {
-  const localeData = locales[locale];
-
+  const localeData = useSelector(localeSelect(locale));
+  const rowArr = useMemo(() => {
+    return Object.entries(enKeys);
+  }, []);
   return (
     <div>
       <div className="p-8 flex justify-between items-center">
@@ -36,43 +45,33 @@ export default function LocaleKeys({ params: { locale } }: ILocalePage) {
         </div>
       </div>
       <div className=" p-12 rounded-3xl">
-        {/* <ol className=" flex flex-col gap-y-7">
-          {Object.entries(enKeys).map((el, i) => {
-            return (
-              <li
-                key={el[0]}
-                className="flex gap-x-8 bg-[#6F4FFC] p-4 rounded-3xl"
-              >
-                <span>{i + 1}</span>
-
-                <span>{el[1]}:</span>
-                <span>{localeData.keys[el[0]] || "none"}</span>
-              </li>
-            );
-          })}
-        </ol> */}
-        <table className="">
+        <div className=" border border-text-secondary ">
           <thead>
             <tr>
-              <th></th>
-              <th>Key</th>
-              <th>Value</th>
+              <th className="border-2 p-4 text-start border-surface-tertiary"></th>
+              <th className="border-2 p-4 text-start border-surface-tertiary">
+                Key
+              </th>
+              <th className="border-2 p-4 text-start border-surface-tertiary">
+                Value
+              </th>
             </tr>
           </thead>
 
           <tbody>
-            {Object.entries(enKeys).map((el, i) => {
+            {rowArr.map((el, i) => {
               return (
-                <tr key={el[0]}>
-                  <td>{i + 1}</td>
-
-                  <td>{el[1]}:</td>
-                  <td>{localeData.keys[el[0]] || "none"}</td>
-                </tr>
+                <TableRow
+                  key={el[0]}
+                  enKey={el[1]}
+                  order={i + 1}
+                  value={localeData.keys[el[0]] || "none"}
+                  onChange={(val: string) => {}}
+                />
               );
             })}
           </tbody>
-        </table>
+        </div>
       </div>
     </div>
   );
