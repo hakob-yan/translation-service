@@ -10,7 +10,6 @@ import { setReduxTheme } from "@/lib/redux/features/configs/configsSlice";
 
 export function useTheme() {
   const theme = useSelector(themeSelect);
-  console.log(66, theme);
 
   const dispatch = useDispatch();
   const themes = [
