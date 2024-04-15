@@ -3,6 +3,6 @@ export async function GET(
   { params }: { params: { locale: string } }
 ) {
   const locale = params.locale;
-  const messages = (await import(`@/utils/translation/${locale}.ts`)).default;
+  const messages = await import(`@/utils/data/${locale}.json`);
   return new Response(JSON.stringify(messages), { status: 200 });
 }
