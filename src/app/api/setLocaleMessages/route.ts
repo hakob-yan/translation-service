@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   const localeMessages = (await import(`@/utils/translation/${locale}.ts`))
     .default;
   localeMessages[key] = value;
-  fs.writeFile("books.txt", localeMessages);
+  fs.writeFile("books.txt", JSON.stringify(localeMessages));
 
   return new Response("ok", { status: 200 });
 }
