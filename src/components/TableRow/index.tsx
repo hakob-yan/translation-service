@@ -1,15 +1,26 @@
+import axios from "axios";
+import { useParams } from "next/navigation";
 import React, { useState } from "react";
 
 type Props = {
   order: number;
   enKey: string;
   value: string;
+  objectKey: string;
   onChange: (value: string) => void;
 };
 
-function TableRow({ order, enKey, value, onChange }: Props) {
+function TableRow({ order, enKey, value, onChange, objectKey }: Props) {
   const [isEditMode, setIsEditMode] = useState(false);
-
+  const params = useParams();
+  const handleOnBlur = async () => {
+    setIsEditMode(false);
+    axios.post("/api/setLocaleMessages", {
+      locale: params.locale,
+      key: objectKey,
+      value: value,
+    });
+  };
   return (
     <>
       <div className="border p-4 border-surface-tertiary">{order}</div>
@@ -24,7 +35,7 @@ function TableRow({ order, enKey, value, onChange }: Props) {
           <textarea
             autoFocus={true}
             value={value}
-            onBlur={() => setIsEditMode(false)}
+            onBlur={handleOnBlur}
             className="h-full w-full bg-transparent p-4"
             onChange={(e) => onChange(e.target.value)}
           />
@@ -36,11 +47,4 @@ function TableRow({ order, enKey, value, onChange }: Props) {
   );
 }
 
-{
-  /* <Image
-alt="Edit"
-className="w-5 h-5 theme-invert cursor-pointer absolute top-[calc(50%-10px)] right-10"
-src={pencil}
-/> */
-}
 export default TableRow;

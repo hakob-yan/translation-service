@@ -68,6 +68,7 @@ export default function LocaleKeys({ params: { locale } }: ILocalePage) {
             return (
               <TableRow
                 key={el[0]}
+                objectKey={el[0]}
                 enKey={el[1]}
                 order={i + 1}
                 value={localeData.keys[el[0]]}
