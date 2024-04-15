@@ -8,15 +8,15 @@ import Italian from "@/assets/icons/countries/ITALY.svg";
 import Portugueses from "@/assets/icons/countries/PORTUGAL.svg";
 import Russian from "@/assets/icons/countries/RUSSIA.svg";
 
-import enKeys from "@/constants/translation/en";
+import enKeys from "@/utils/translation/en";
 
-import deKeys from "@/constants/translation/de";
-import esKeys from "@/constants/translation/es";
-import frKeys from "@/constants/translation/fr";
-import itKeys from "@/constants/translation/it";
-import ruKeys from "@/constants/translation/ru";
-import ptKeys from "@/constants/translation/pt";
-import etKeys from "@/constants/translation/et";
+import deKeys from "@/utils/translation/de";
+import esKeys from "@/utils/translation/es";
+import frKeys from "@/utils/translation/fr";
+import itKeys from "@/utils/translation/it";
+import ruKeys from "@/utils/translation/ru";
+import ptKeys from "@/utils/translation/pt";
+import etKeys from "@/utils/translation/et";
 import { LOCALES } from "@/constants";
 
 export const locales = {
