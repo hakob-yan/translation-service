@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useParams } from "next/navigation";
-import React, { useState } from "react";
+import React, { KeyboardEvent, useRef, useState } from "react";
 
 type Props = {
   order: number;
@@ -12,6 +12,7 @@ type Props = {
 
 function TableRow({ order, enKey, value, onChange, objectKey }: Props) {
   const [isEditMode, setIsEditMode] = useState(false);
+  const refElement = useRef<null | HTMLTextAreaElement>(null);
   const params = useParams();
   const handleOnBlur = async () => {
     setIsEditMode(false);
@@ -20,6 +21,11 @@ function TableRow({ order, enKey, value, onChange, objectKey }: Props) {
       key: objectKey,
       value: value,
     });
+  };
+  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && refElement) {
+      refElement.current?.blur();
+    }
   };
   return (
     <>
@@ -33,6 +39,8 @@ function TableRow({ order, enKey, value, onChange, objectKey }: Props) {
       >
         {isEditMode ? (
           <textarea
+            ref={refElement}
+            onKeyDown={handleKeyDown}
             autoFocus={true}
             value={value}
             onBlur={handleOnBlur}
