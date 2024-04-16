@@ -1,0 +1,51 @@
+stages:
+  - publish
+  - deploy
+
+variables:
+  TAG_LATEST: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:latest
+  TAG_COMMIT: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_NAME:$CI_COMMIT_SHORT_SHA
+  
+
+publish:
+  image: docker:latest
+  stage: publish
+  services:
+    - docker:dind
+  script:
+    - cp $ENV .env
+    - docker build --build-arg ENVIRONMENT=$ENVIRONMENT --build-arg RUN_COMMAND="$RUN_COMMAND" -t $TAG_COMMIT -t $TAG_LATEST .
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker push $TAG_COMMIT
+    - docker push $TAG_LATEST
+
+  environment:
+    name: $CI_COMMIT_REF_NAME
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - if: $CI_COMMIT_REF_NAME == "dev" || $CI_COMMIT_REF_NAME == "staging" || $CI_COMMIT_REF_NAME == "production"
+
+deploy:
+  image: alpine:latest
+  stage: deploy
+  tags:
+    - deployment
+  script:
+    - chmod og= $ID_RSA
+    - apk update && apk add openssh-client
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP -p $SERVER_PORT "echo $CI_REGISTRY_PASSWORD | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP -p $SERVER_PORT "docker pull $TAG_COMMIT"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP -p $SERVER_PORT "docker container rm -f swaps-translate-$CI_COMMIT_REF_NAME || true"
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP -p $SERVER_PORT "docker run -d --name swaps-translate-$CI_COMMIT_REF_NAME --network=swaps-network -p $PORT:3000 $TAG_COMMIT"
+    - 'apk --no-cache add curl'
+    - 'curl -X POST -H "Content-Type: application/json" -d "{\"chat_id\": \"$TR_GROUP_ID\", \"text\": \"CI: $CI_COMMIT_REF_NAME  Swaps Translate (NextJS) new version was uploaded, see: $WEBSITE_URL\"}" https://api.telegram.org/bot"$TR_TOKEN"/sendMessage '
+  environment:
+    name: $CI_COMMIT_REF_NAME
+    url: $WEBSITE_URL
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+      when: never
+    - if: $CI_COMMIT_REF_NAME == "dev" || $CI_COMMIT_REF_NAME == "staging" || $CI_COMMIT_REF_NAME == "production"
+
+
