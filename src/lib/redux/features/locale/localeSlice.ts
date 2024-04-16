@@ -10,13 +10,14 @@ import Russian from "@/assets/icons/countries/RUSSIA.svg";
 
 import enKeys from "@/utils/translation/en";
 
-import deKeys from "@/utils/translation/de";
-import esKeys from "@/utils/translation/es";
-import frKeys from "@/utils/translation/fr";
-import itKeys from "@/utils/translation/it";
-import ruKeys from "@/utils/translation/ru";
-import ptKeys from "@/utils/translation/pt";
-import etKeys from "@/utils/translation/et";
+import deKeys from "@/data/de.json";
+import esKeys from "@/data/es.json";
+import frKeys from "@/data/fr.json";
+import itKeys from "@/data/it.json";
+import ruKeys from "@/data/ru.json";
+import ptKeys from "@/data/pt.json";
+import etKeys from "@/data/et.json";
+
 import { LOCALES } from "@/constants";
 
 export const locales = {
