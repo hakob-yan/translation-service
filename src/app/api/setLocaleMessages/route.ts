@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     .default;
   localeMessages[key] = value;
   fs.writeFile(
-    `../../../utils/data/${locale}.json`,
+    `src/data/${locale}.json`,
     JSON.stringify(localeMessages),
     (err: any) => {
       console.log(err);
