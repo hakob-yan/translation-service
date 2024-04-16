@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 export async function GET(
   request: Request,
   { params }: { params: { locale: string } }
@@ -7,3 +9,4 @@ export async function GET(
 
   return new Response(JSON.stringify(messages), { status: 200 });
 }
+export const revalidate = 0;

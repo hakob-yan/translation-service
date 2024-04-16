@@ -9,7 +9,7 @@ export const store = configureStore({
     [localeSlice.name]: localeSlice.reducer,
     [configsSlice.name]: configsSlice.reducer,
   },
-  devTools: isProduction() ? false : true,
+  devTools: true,
 });
 
 export type RootState = ReturnType<typeof store.getState>;
