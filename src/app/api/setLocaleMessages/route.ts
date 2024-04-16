@@ -1,5 +1,4 @@
 const fs = require("fs");
-
 async function streamToString(stream: any): Promise<any> {
   const chunks = [];
   for await (const chunk of stream) {
@@ -14,7 +13,7 @@ export async function POST(request: Request) {
     .default;
   localeMessages[key] = value;
   fs.writeFile(
-    `src/utils/data/${locale}.json`,
+    `../../../utils/data/${locale}.json`,
     JSON.stringify(localeMessages),
     (err: any) => {
       console.log(err);
