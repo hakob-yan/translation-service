@@ -21,6 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const dataTheme = cookies().get(PREFERED_THEME)?.value;
+  console.log(new Date());
 
   return (
     <html lang="en" data-theme={dataTheme}>

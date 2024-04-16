@@ -19,8 +19,9 @@ import ptKeys from "@/data/pt.json";
 import etKeys from "@/data/et.json";
 
 import { LOCALES } from "@/constants";
+console.log(3333);
 
-export const locales = {
+const locales = {
   en: { value: "English", icon: English, keys: enKeys },
   de: { value: "German", icon: German, keys: deKeys },
   es: { value: "Spanish", icon: Spain, keys: esKeys },

@@ -9,13 +9,11 @@ import { useMemo, useState } from "react";
 import TableRow from "@/components/TableRow";
 import {
   ILocaleKey,
-  locales,
   setLocaleKey,
 } from "@/lib/redux/features/locale/localeSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { localeSelect } from "@/lib/redux/features/locale/selectors";
 import { ROUTES } from "@/constants";
-const enKeys = locales["en"].keys;
 
 interface ILocalePage {
   params: {
@@ -24,10 +22,10 @@ interface ILocalePage {
 }
 export default function LocaleKeys({ params: { locale } }: ILocalePage) {
   const localeData = useSelector(localeSelect(locale));
+  const enKeys = useSelector(localeSelect("en")).keys;
+
   const dispatch = useDispatch();
-  const rowArr = useMemo(() => {
-    return Object.entries(enKeys);
-  }, []);
+  const rowArr = Object.entries(enKeys);
   const handleValueChange = ({
     key,
     value,
