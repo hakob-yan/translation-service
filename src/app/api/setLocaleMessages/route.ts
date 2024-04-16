@@ -15,9 +15,7 @@ export async function POST(request: Request) {
   fs.writeFile(
     `src/data/${locale}.json`,
     JSON.stringify(localeMessages),
-    (err: any) => {
-      console.log(err);
-    }
+    (err: any) => {}
   );
 
   return new Response(data, { status: 200 });

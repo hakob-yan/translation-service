@@ -7,6 +7,7 @@ import { cookies } from "next/headers";
 import { PREFERED_THEME, THEMES } from "@/constants";
 import { ReduxProvider } from "@/components/Providers/ReduxProvider";
 import ThemeProvider from "@/components/Providers/ThemeProvider";
+import InitiateProvider from "@/components/Providers/InitiateProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,21 +22,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const dataTheme = cookies().get(PREFERED_THEME)?.value;
-  console.log(new Date());
 
   return (
     <html lang="en" data-theme={dataTheme}>
       <ReduxProvider>
         <ThemeProvider>
-          <body
-            className={`${inter.className} bg-surface-primary text-text-primary `}
-          >
-            <header>
-              <Navbar />
-            </header>
-            <main className="max-w-[100rem] mx-auto">{children}</main>
-            <Footer />
-          </body>
+          <InitiateProvider>
+            <body
+              className={`${inter.className} bg-surface-primary text-text-primary `}
+            >
+              <header>
+                <Navbar />
+              </header>
+              <main className="max-w-[100rem] mx-auto">{children}</main>
+              <Footer />
+            </body>
+          </InitiateProvider>
         </ThemeProvider>
       </ReduxProvider>
     </html>
