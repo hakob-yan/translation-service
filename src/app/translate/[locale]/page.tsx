@@ -71,7 +71,7 @@ export default function LocaleKeys({ params: { locale } }: ILocalePage) {
                 objectKey={el[0]}
                 enKey={el[1]}
                 order={i + 1}
-                value={localeData.keys[el[0]]}
+                value={(localeData.keys as any)[el[0]]}
                 onChange={(val: string) =>
                   handleValueChange({ value: val, key: el[0] })
                 }
