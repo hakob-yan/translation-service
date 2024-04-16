@@ -19,7 +19,6 @@ import ptKeys from "@/data/pt.json";
 import etKeys from "@/data/et.json";
 
 import { LOCALES } from "@/constants";
-console.log(3333);
 
 const locales = {
   en: { value: "English", icon: English, keys: enKeys },
