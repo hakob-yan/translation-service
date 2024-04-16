@@ -9,8 +9,12 @@ async function streamToString(stream: any): Promise<any> {
 export async function POST(request: Request) {
   const data = await streamToString(request.body);
   const { locale, key, value } = JSON.parse(data);
-  const localeMessages = (await import(`@/utils/translation/${locale}.ts`))
-    .default;
+  const localeMessages = JSON.parse(
+    fs.readFileSync(`src/data/${locale}.json`, {
+      encoding: "utf8",
+    })
+  );
+
   localeMessages[key] = value;
   fs.writeFile(
     `src/data/${locale}.json`,
