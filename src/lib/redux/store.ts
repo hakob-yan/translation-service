@@ -1,5 +1,3 @@
-// "use client"
-
 import { configureStore } from "@reduxjs/toolkit";
 import { localeSlice } from "./features/locale/localeSlice";
 import { configsSlice } from "./features/configs/configsSlice";
