@@ -48,12 +48,14 @@ export default function LocaleKeys({ params: { locale } }: ILocalePage) {
           />
         </Link>
 
-        <p className="text-center font-semibold text-5xl">{localeData.value}</p>
+        <p className="text-center font-semibold xsm:text-5xl text-3xl">
+          {localeData.value}
+        </p>
         <div className=" flex  justify-center items-center gap-x-10">
           <Image
             alt="Locale Image"
             src={localeData.icon}
-            className="w-[8rem] h-[8rem] rounded-full object-cover  border-2"
+            className="xsm:w-[8rem] xsm:h-[8rem] w-16 h-16 rounded-full object-cover  border-2"
           />
         </div>
       </div>
