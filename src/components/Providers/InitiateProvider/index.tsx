@@ -19,6 +19,9 @@ function InitiateProvider({ children }: { children: ReactNode }) {
       messages.forEach((el, i) => {
         dispatch(setLocaleMessages({ messages: el.data, locale: locales[i] }));
       });
+      const { data } = await axios.get(`https://crypto.swaps.fun/api/getEnKeys`);
+
+      dispatch(setLocaleMessages({ messages: data, locale: "en" }));
     };
     getMessages();
     // eslint-disable-next-line react-hooks/exhaustive-deps
